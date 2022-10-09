@@ -37,3 +37,21 @@ void PrintArray(double [,] numbers)
     }
 }
 Zadacha47();
+
+//Задача 50: Напишите программу, которая на вход принимает индексы элемента в двумерном массиве и возвращает значение этого элемента или же указание, что такого элемента нет.
+ 
+ void Zadacha50()
+ {
+    Random random = new Random();
+    int rows = random.Next(4,7);
+    int columns = random.Next(4,7);
+    double [,] numbers = new double [rows,columns];
+    FillArray(numbers);
+    PrintArray(numbers);
+    Console.WriteLine("Введите индекс строки элемента в массиве");
+    int i = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Введите индекс столбца элемента в массиве");
+    int j = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine(numbers[i,j]);
+ }
+ Zadacha50();
