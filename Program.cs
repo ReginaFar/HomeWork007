@@ -51,13 +51,13 @@ void Zadacha50()
     int i = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Введите индекс столбца элемента в массиве");
     int j = Convert.ToInt32(Console.ReadLine());
-    if (i < numbers.GetLength(0) || j < numbers.GetLength(1))
+    if (i > numbers.GetLength(0) || j > numbers.GetLength(1))
     {
-        Console.WriteLine(numbers[i,j]);
+        Console.WriteLine($"{i};{j} -> такого числа в массиве нет");
     }
     else
     {
-        Console.WriteLine($"{i}{j} -> такого числа в массиве нет");
+        Console.WriteLine(numbers[i,j]);
     }
     Console.WriteLine();
 }
